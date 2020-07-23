@@ -1,0 +1,45 @@
+/*** Variables ***/
+// Colors
+$color-primary: #1a202c;
+$bg-author: #333333;
+$color-before: #faf089;
+$color-author: #333333;
+$color-genre: #828282;
+$color-footer: #a9a9a9;
+
+// Fonts
+$font-primary: "Raleway", sans-serif;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 2rem auto;
+  min-height: 100%;
+
+  display: grid;
+  grid-template-rows: 10vh minmax(80vh, 1fr) 10vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

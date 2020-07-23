@@ -1,0 +1,29 @@
+.header {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main {
+  width: 70%;
+  align-self: center;
+  justify-self: center;
+}
+
+.footer {
+  align-self: end;
+  justify-self: center;
+  color: darken($color: $color-footer, $amount: 20);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+
+  a {
+    padding-bottom: 0.5rem;
+  }
+
+  a:hover {
+    border-bottom: 1px solid $color-footer;
+  }
+}

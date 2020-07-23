@@ -1,0 +1,111 @@
+.single-quote {
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  row-gap: 4rem;
+}
+
+.quote {
+  font-family: $color-primary;
+  color: lighten($color: #000000, $amount: 35);
+  font-style: normal;
+  font-size: 3.6rem;
+  line-height: 140%;
+  text-align: left;
+
+  display: grid;
+  grid-template-columns: min-content auto;
+  column-gap: 8rem;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 8px;
+    background-color: $color-before;
+  }
+}
+
+.author__link {
+  cursor: pointer;
+  padding: 2rem 6rem;
+  padding-left: 8.8rem;
+  padding-right: 4rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+
+  div > p {
+    font-family: inherit;
+    color: $color-genre;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 16px;
+  }
+
+  .right {
+    visibility: hidden;
+    color: #fff;
+    font-size: 5rem;
+  }
+
+  &:hover {
+    background-color: $bg-author;
+  }
+
+  &:hover .right {
+    visibility: visible;
+  }
+
+  &:hover .heading-2 {
+    color: #f2f2f2;
+  }
+}
+
+.multiple-quotes {
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  row-gap: 6rem;
+
+  .author {
+    margin-left: 8.8rem;
+  }
+}
+
+// Loading Icon
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    height: 5rem;
+    width: 5rem;
+    fill: lighten($color: $color-primary, $amount: 10);
+    animation-name: loaderAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes loaderAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
