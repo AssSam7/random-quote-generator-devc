@@ -4,6 +4,7 @@ Random Quote Generator is a part of the Front-end web developer road map of [Dev
 DOM rendering, calling the API, loading the results etc.
 
 ## ✈️ [Live URL]
+https://thirsty-joliot-ab15d4.netlify.app/
 
 ## 🤖 [Tech Stack]
 1. SCSS (CSS Pre-processor)
