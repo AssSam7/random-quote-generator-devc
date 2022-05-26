@@ -3,9 +3,9 @@ import axios from "axios";
 export default class Home {
   constructor() {
     this.randomApiURL =
-      "https://quote-garden.herokuapp.com/api/v2/quotes/random";
+      "https://quote-garden.herokuapp.com/api/v3/quotes/random";
     this.quotesByAuthorApiURL =
-      "https://quote-garden.herokuapp.com/api/v2/authors/";
+      "https://quote-garden.herokuapp.com/api/v3/quotes";
   }
 
   // Methods
@@ -17,7 +17,7 @@ export default class Home {
 
   // All Quotes based on Author
   getQuotesByAuthor(author) {
-    console.log(this.quotesByAuthorApiURL + author + "?page=1&limit=10");
-    return axios.get(this.quotesByAuthorApiURL + author + "?page=1&limit=10");
+    console.log(`${this.quotesByAuthorApiURL}?author=${author}&page=1&limit=10`);
+    return axios.get(`${this.quotesByAuthorApiURL}?author=${author}&page=1&limit=10`);
   }
 }
